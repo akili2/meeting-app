@@ -1,3 +1,5 @@
+import eventlet
+eventlet.monkey_patch()  # Doit être la première instruction
 import os
 from flask import Flask, render_template, request, redirect, url_for, session, jsonify
 from flask_socketio import SocketIO, emit, join_room, leave_room
